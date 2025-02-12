@@ -2,76 +2,117 @@
     margin: 0;
     padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
 }
 
 html, body {
     height: 100%;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main {
-    width: 105%; /* Increased by 5% */
-    height: 105%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 189px; /* 180px + 5% */
+    align-items: center;
+    padding: 20px;
 }
 
 .island {
-    width: 556.5px; /* 530px + 5% */
-    height: 200px; /* 170px + 5% */
+    width: 90%;
+    max-width: 500px;
     background-color: aliceblue;
     border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
 }
 
+/* Profile Section */
 .prof {
-    width: 100%;
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
 }
 
-.island img {
-    width: 35px; /* 20px + 5% */
-    height: 35px; /* 25px + 5% */
+.prof img {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    margin-left: 17px; /* 14px + 5% */
-    margin-top: 9px; /* 12px + 5% */
-    margin-right: 21px; /* 20px + 5% */
 }
 
 .prof h2 {
-    margin-top: 11.55px; /* 11px + 5% */
-    font-size: 25.2px; /* 24px + 5% */
+    font-size: 22px;
     color: #333;
 }
 
 .prof h6 {
-    font-size: 10.5px; /* 10px + 5% */
-    margin-top: 24.15px; /* 23px + 5% */
-    margin-left: 10.5px; /* 10px + 5% */
+    font-size: 12px;
+    color: gray;
+    margin-top: 5px;
 }
 
+/* Content Section */
 .content {
-    width: 94.5%; /* 90% + 5% */
-    margin-top: 10.5px; /* 10px + 5% */
-    margin-left: 15.75px; /* 15px + 5% */
+    margin-top: 15px;
 }
 
+.content h4 {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Footer Section */
 .footer {
-    width: 100%;
-    margin-top: 35px; /* 48px + 5% */
     display: flex;
-    justify-content: space-evenly;
-    align-items: baseline;
-    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
 }
 
 .footer a {
     color: #333;
     text-decoration: none;
-    margin-right: 21px; /* 20px + 5% */
+    font-size: 14px;
+    padding: 5px 10px;
+    background: #ddd;
+    border-radius: 5px;
 }
 
 .footer a:hover {
-    text-decoration: underline;
+    background: #ccc;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+    .island {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .prof h2 {
+        font-size: 20px;
+    }
+
+    .prof img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .content h4 {
+        font-size: 14px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer a {
+        width: 80%;
+        text-align: center;
+    }
 }
